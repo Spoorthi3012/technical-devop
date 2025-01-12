@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #808080;
+  color: #333;
+}
+
+/* Header Section */
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: #FFFFFF;
+  padding: 1rem;
+  text-align: center;
+}
+
+.menu-header .logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.menu-header h1 {
+  font-size: 2rem;
+}
+
+/* Menu Container */
+.menu-container {
+  padding: 2rem;
+}
+
+/* Category Section */
+.menu-category {
+  margin-bottom: 2rem;
+}
+
+.menu-category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Grid Layout for Menu Items */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.menu-item .description {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.menu-item .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Food Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  </style>
+</head>
+<body>
+  <header class="menu-header">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI2OE_DiN0zZCkfQUBWXICFOlUJu0wpRy8ag&s" alt="Restaurant Logo" class="logo-img">
+    </div>
+    <h1>Delicious Bites</h1>
+  </header>
+
+  <main class="menu-container">
+    <!-- Starters Section -->
+    <section class="menu-category">
+      <h2>Starters</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Spring Rolls</h3>
+          <p class="description">Crispy rolls with fresh vegetables.</p>
+          <p class="price">Rs50</p>
+        </div>
+        <div class="menu-item">
+          <h3>Garlic Bread</h3>
+          <p class="description">Freshly baked with garlic butter.</p>
+          <p class="price">Rs50</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Course Section -->
+    <section class="menu-category">
+      <h2>Main Course</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Grilled Chicken</h3>
+          <p class="description">Juicy grilled chicken with herbs.</p>
+          <p class="price">Rs120</p>
+        </div>
+        <div class="menu-item">
+          <h3>Vegetable Pasta</h3>
+          <p class="description">Creamy pasta with fresh veggies.</p>
+          <p class="price">Rs100</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section class="menu-category">
+      <h2>Desserts</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Chocolate Cake</h3>
+          <p class="description">Rich and moist chocolate delight.</p>
+          <p class="price">Rs60</p>
+        </div>
+        <div class="menu-item">
+          <h3>Ice Cream</h3>
+          <p class="description">Choice of vanilla, chocolate, or strawberry.</p>
+          <p class="price">Rs80</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

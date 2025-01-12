@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+   /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
+#successMessage {
+  color: green;
+  font-size: 18px;
+  text-align: center;
+}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link rel="stylesheet" href="styles.css">
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Student Login</h1>
+    <form id="studentForm" onsubmit="handleSubmit(event)">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="registerNumber">Register Number:</label>
+      <input type="text" id="registerNumber" name="registerNumber" required>
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label>Course:</label>
+      <div class="checkbox-group">
+        <input type="radio" id="bca" name="course" value="BCA" required>
+        <label for="bca">BCA</label>
+
+        <input type="radio" id="bba" name="course" value="BBA">
+        <label for="bba">BBA</label>
+
+        <input type="radio" id="bcom" name="course" value="B.Com">
+        <label for="bcom">B.Com</label>
+      </div>
+
+      <label for="phone">Phone Number:</label>
+      <input type="number" id="phone" name="phone" required>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="successMessage" class="hidden">Successfully Done!</p>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent form submission
+      document.getElementById("successMessage").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
